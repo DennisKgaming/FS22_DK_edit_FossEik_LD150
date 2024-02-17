@@ -1,0 +1,693 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<vehicle type="trailer" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://validation.gdn.giants-software.com/xml/fs22/vehicle.xsd">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+    
+	<storeData>
+        <name>LD 5.150 DK edit</name>
+        <functions>
+            <function>$l10n_function_tipper</function>
+        </functions>
+        <storePacks>
+            <storePack>STARTER_GRAINS</storePack>
+            <storePack>STARTER_ANIMALS</storePack>
+            <storePack>STARTER_POTATOES</storePack>
+            <storePack>STARTER_SUGARBEET</storePack>
+            <storePack>STARTER_WOODCHIPS</storePack>
+            <storePack>STARTER_TRANSPORT</storePack>
+        </storePacks>
+        <image>icons/store_fossEik_LD150.dds</image>
+        <price>15000</price>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>FOSSEIK</brand>
+        <category>DennisKtools</category>
+        <shopTranslationOffset>0 0 0</shopTranslationOffset>
+        <shopRotationOffset>0 0 0</shopRotationOffset>
+    </storeData>
+    
+	<base>
+        <typeDesc>$l10n_typeDesc_tipper</typeDesc>
+        <filename>i3d/LD150_ingame.i3d</filename>
+        <size width="3" length="5" lengthOffset="1" />
+        <components maxMass="19000">
+            <component centerOfMass="0 0.745 0.8" solverIterationCount="10" mass="2000" />
+			
+            <component centerOfMass="0.6 0 0" solverIterationCount="10" mass="750" />
+            <component centerOfMass="-0.6 0 0" solverIterationCount="10" mass="750" />
+			
+			<joint component1="1" component2="2" node="jointBogieLeft" rotLimit="5 0 0" transLimit="0 0 0" />
+            <joint component1="1" component2="3" node="jointBogieRight" rotLimit="5 0 0" transLimit="0 0 0" />
+        </components>
+        <schemaOverlay attacherJointPosition="0 0" name="IMPLEMENT"/>
+        <mapHotspot type="TRAILER" />
+        <sounds volumeFactor="1.7"/>
+    </base>
+
+    <configurationSets>
+        <configurationSet name="$l10n_configuration_valueDefault">
+            <configuration name="fillVolume"   index="1" />
+            <configuration name="fillUnit"     index="1" />
+            <configuration name="trailer"      index="1" />
+        </configurationSet>
+        <configurationSet name="$l10n_configuration_extension" isDefault="false">
+            <configuration name="fillVolume"   index="2" />
+            <configuration name="fillUnit"     index="2" />
+            <configuration name="trailer"      index="2" />
+        </configurationSet>
+    </configurationSets>
+    
+    <wheels>
+        <wheelConfigurations>
+           <wheelConfiguration name="$l10n_configuration_valueDefault" price="0" brand="Michelin" saveId="MICHELIN_DEFAULT">
+                <wheels>
+                    <wheel filename="$data/shared/wheels/tires/michelin/cargoXBibHD/560_45R22_5.xml" isLeft="true" >
+                        <physics tipOcclusionAreaGroupId="1" restLoad="1.4" repr="wheelFrontLeft"  forcePointRatio="0.4" initialCompression="20" suspTravel="0.15" spring="50" damper="50" yOffset="-0.002"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/michelin/cargoXBibHD/560_45R22_5.xml" isLeft="false" >
+                        <physics tipOcclusionAreaGroupId="1" restLoad="1.4" repr="wheelFrontRight" forcePointRatio="0.4" initialCompression="20" suspTravel="0.15" spring="50" damper="50" yOffset="-0.002"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/michelin/cargoXBibHD/560_45R22_5.xml" isLeft="true" hasTireTracks="true" hasParticles="true" >
+                        <physics tipOcclusionAreaGroupId="1" restLoad="1.6" repr="wheelBackLeft"   forcePointRatio="0.4" initialCompression="20" suspTravel="0.15" spring="50" damper="50" yOffset="0.002"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/michelin/cargoXBibHD/560_45R22_5.xml" isLeft="false" hasTireTracks="true" hasParticles="true" >
+                        <physics tipOcclusionAreaGroupId="1" restLoad="1.6" repr="wheelBackRight"  forcePointRatio="0.4" initialCompression="20" suspTravel="0.15" spring="50" damper="50" yOffset="0.002"/>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+			<wheelConfiguration name="Default Special 1" price="0" brand="Michelin" saveId="MICHELIN_SPECIAL1">
+                <wheels>
+                    <wheel filename="wheels/tires/michelin/cargoXBibHD/560_45R22_5.xml" isLeft="true" >
+                        <physics tipOcclusionAreaGroupId="1" restLoad="1.4" repr="wheelFrontLeft"  forcePointRatio="0.4" initialCompression="20" suspTravel="0.15" spring="50" damper="50" yOffset="-0.002"/>
+                    </wheel>
+                    <wheel filename="wheels/tires/michelin/cargoXBibHD/560_45R22_5.xml" isLeft="false" >
+                        <physics tipOcclusionAreaGroupId="1" restLoad="1.4" repr="wheelFrontRight" forcePointRatio="0.4" initialCompression="20" suspTravel="0.15" spring="50" damper="50" yOffset="-0.002"/>
+                    </wheel>
+                    <wheel filename="wheels/tires/michelin/cargoXBibHD/560_45R22_5.xml" isLeft="true" hasTireTracks="true" hasParticles="true" >
+                        <physics tipOcclusionAreaGroupId="1" restLoad="1.6" repr="wheelBackLeft"   forcePointRatio="0.4" initialCompression="20" suspTravel="0.15" spring="50" damper="50" yOffset="0.002"/>
+                    </wheel>
+                    <wheel filename="wheels/tires/michelin/cargoXBibHD/560_45R22_5.xml" isLeft="false" hasTireTracks="true" hasParticles="true" >
+                        <physics tipOcclusionAreaGroupId="1" restLoad="1.6" repr="wheelBackRight"  forcePointRatio="0.4" initialCompression="20" suspTravel="0.15" spring="50" damper="50" yOffset="0.002"/>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+			<wheelConfiguration name="Default Special 2" price="0" brand="Michelin" saveId="MICHELIN_SPECIAL2">
+                <wheels>
+                    <wheel filename="wheels/tires/michelin/cargoXBibHD/560_45R22_5.xml" isLeft="true" >
+                        <physics tipOcclusionAreaGroupId="1" restLoad="1.4" repr="wheelFrontLeft"  forcePointRatio="0.4" initialCompression="20" suspTravel="0.15" spring="50" damper="50" yOffset="-0.002"/>
+                    </wheel>
+                    <wheel filename="wheels/tires/michelin/cargoXBibHD/560_45R22_5.xml" isLeft="false" >
+                        <physics tipOcclusionAreaGroupId="1" restLoad="1.4" repr="wheelFrontRight" forcePointRatio="0.4" initialCompression="20" suspTravel="0.15" spring="50" damper="50" yOffset="-0.002"/>
+                    </wheel>
+                    <wheel filename="wheels/tires/michelin/cargoXBibHD/560_45R22_5.xml" isLeft="true" hasTireTracks="true" hasParticles="true" >
+                        <physics tipOcclusionAreaGroupId="1" restLoad="1.6" repr="wheelBackLeft"   forcePointRatio="0.4" initialCompression="20" suspTravel="0.15" spring="50" damper="50" yOffset="0.002"/>
+                    </wheel>
+                    <wheel filename="wheels/tires/michelin/cargoXBibHD/560_45R22_5.xml" isLeft="false" hasTireTracks="true" hasParticles="true" >
+                        <physics tipOcclusionAreaGroupId="1" restLoad="1.6" repr="wheelBackRight"  forcePointRatio="0.4" initialCompression="20" suspTravel="0.15" spring="50" damper="50" yOffset="0.002"/>
+                    </wheel>
+                </wheels>
+				<objectChange node="wheelRingLF" visibilityActive="true" translationActive="-0.05 0 0"	scaleActive="0.65 0.55 0.55"/>
+				<objectChange node="wheelRingLB" visibilityActive="true" translationActive="-0.05 0 0"	scaleActive="0.65 0.55 0.55"/>
+				<objectChange node="wheelRingRF" visibilityActive="true" translationActive="0.05 0 0"	scaleActive="0.65 0.55 0.55"/>
+				<objectChange node="wheelRingRB" visibilityActive="true" translationActive="0.05 0 0"	scaleActive="0.65 0.55 0.55"/>
+            </wheelConfiguration>
+        </wheelConfigurations>
+
+        <hubs>
+            <color0 useBaseColor="true"/>
+            <color1 material="1">SHARED_DA_METAL_BLACK</color1>
+            <hub linkNode="wheelFrontLeft"  filename="$data/shared/wheels/hubs/hub_n10_5.xml" isLeft="true"  scale="0.335 0.335 0.335" />
+            <hub linkNode="wheelFrontRight" filename="$data/shared/wheels/hubs/hub_n10_5.xml" isLeft="false" scale="0.335 0.335 0.335" />
+            <hub linkNode="wheelBackLeft"   filename="$data/shared/wheels/hubs/hub_n10_5.xml" isLeft="true"  scale="0.335 0.335 0.335" />
+            <hub linkNode="wheelBackRight"  filename="$data/shared/wheels/hubs/hub_n10_5.xml" isLeft="false" scale="0.335 0.335 0.335" />
+        </hubs>
+    </wheels>
+	
+    <lights>
+		<sharedLight linkNode="rearLight_left1_01"     	filename="lights/rearLight01_left.xml" />
+        <sharedLight linkNode="rearLight_left2_01"    	filename="lights/rearLight01_left.xml" />
+
+        <sharedLight linkNode="rearLight_right1_01"     filename="lights/rearLight01_right.xml" />
+        <sharedLight linkNode="rearLight_right2_01"   	filename="lights/rearLight01_right.xml" />
+
+        <sharedLight linkNode="rearLight_left1"     	filename="lights/rearLight10_left.xml" />
+        <sharedLight linkNode="rearLight_left2"    		filename="lights/rearLight10_left.xml" />
+
+
+		<sharedLight linkNode="rearLight_right1"     	filename="lights/rearLight10_right.xml" />
+        <sharedLight linkNode="rearLight_right2"    	filename="lights/rearLight10_right.xml" />
+
+        <sharedLight linkNode="sideMarker04_left"     	filename="lights/sideMarker04_left.xml" />
+        <sharedLight linkNode="sideMarker04_left_2"     filename="lights/sideMarker04_left.xml" />
+        <sharedLight linkNode="sideMarker04_right"    	filename="lights/sideMarker04_right.xml" />
+        <sharedLight linkNode="sideMarker04_right_2"    filename="lights/sideMarker04_right.xml" />
+		
+        <sharedLight linkNode="rearLightR_01_top"    	filename="lights/sideMarker05Red.xml" />
+        <sharedLight linkNode="rearLightL_01_top"    	filename="lights/sideMarker05Red.xml" />
+		
+        <sharedLight linkNode="sideMarkerL_01"    		filename="lights/sideMarker05Orange.xml" />
+        <sharedLight linkNode="sideMarkerL_02"    		filename="lights/sideMarker05Orange.xml" />
+        <sharedLight linkNode="sideMarkerL_03"    		filename="lights/sideMarker05Orange.xml" />
+        <sharedLight linkNode="sideMarkerL_04"    		filename="lights/sideMarker05Orange.xml" />
+		
+        <sharedLight linkNode="sideMarkerR_01"    		filename="lights/sideMarker05Orange.xml" />
+        <sharedLight linkNode="sideMarkerR_02"    		filename="lights/sideMarker05Orange.xml" />
+        <sharedLight linkNode="sideMarkerR_03"    		filename="lights/sideMarker05Orange.xml" />
+        <sharedLight linkNode="sideMarkerR_04"    		filename="lights/sideMarker05Orange.xml" />
+
+        <realLights>
+            <high>
+                <light 			node="0>0|1|8|4|0|4" 			lightTypes="1" />
+                <light 			node="0>0|1|8|4|1|4" 			lightTypes="1"/>
+                <light 			node="0>0|1|8|2|1|2|0"			lightTypes="0"/>
+                <light 			node="sidemarkerOrange_real"	lightTypes="0"/>
+                <light 			node="sidemarkerRed_real"		lightTypes="0"/>
+                <turnLightLeft 	node="0>0|1|8|2|1|3|0"/>
+                <turnLightRight	node="0>0|1|8|2|1|3|1"/>
+                <brakeLight 	node="0>0|1|8|2|1|2|0"/>
+				
+                <reverseLight 	node="0>0|1|8|4|0|4"/>
+                <reverseLight 	node="0>0|1|8|4|1|4"/>
+            </high>
+        </realLights>
+		
+        <defaultLights>
+            <defaultLight shaderNode="worklight1" lightTypes="1"/>
+            <defaultLight shaderNode="worklight2" lightTypes="1"/>
+        </defaultLights>
+		
+		<reverseLights>
+			<reverseLight shaderNode="worklight1" />
+			<reverseLight shaderNode="worklight2" />
+		</reverseLights>
+
+    </lights>
+
+    <attachable>
+        <inputAttacherJoints>
+            <inputAttacherJoint node="attacherJoint" jointType="trailer" attacherHeight="0.60"/>
+        </inputAttacherJoints>
+        <brakeForce force="1" maxForce="2.5" maxForceMass="20500"/>
+    </attachable>
+	
+    <connectionHoses>
+        <hose inputAttacherJointIndices="1" type="electric" node="0>0|0|1|0" length="1.2" diameter="0.01" straighteningFactor="1">
+            <objectChange node="0>0|0|1|5" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+        <hose inputAttacherJointIndices="1" type="hydraulicOut" node="0>0|0|1|1" length="1.2" diameter="0.01" straighteningFactor="1">
+            <objectChange node="0>0|0|1|6" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+        <hose inputAttacherJointIndices="1" type="hydraulicIn"  node="0>0|0|1|2"  length="1.2" diameter="0.01" straighteningFactor="1">
+            <objectChange node="0>0|0|1|7" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+        <hose inputAttacherJointIndices="1" type="hydraulicOut" node="0>0|0|1|3" length="1.2" diameter="0.01" straighteningFactor="1">
+            <objectChange node="0>0|0|1|8" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+        <hose inputAttacherJointIndices="1" type="hydraulicIn"  node="0>0|0|1|4"  length="1.2" diameter="0.01" straighteningFactor="1">
+            <objectChange node="0>0|0|1|9" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+    </connectionHoses>
+
+    <dynamicallyLoadedParts>
+        <dynamicallyLoadedPart node="1|1" linkNode="0>0|0|1|5|0"  filename="$data/shared/connectionHoses/connectors.i3d" />
+        <dynamicallyLoadedPart node="1|0" linkNode="0>0|0|1|6|0"  filename="$data/shared/connectionHoses/connectors.i3d" />
+        <dynamicallyLoadedPart node="1|0" linkNode="0>0|0|1|7|0"  filename="$data/shared/connectionHoses/connectors.i3d" />
+        <dynamicallyLoadedPart node="1|0" linkNode="0>0|0|1|8|0"  filename="$data/shared/connectionHoses/connectors.i3d" />
+        <dynamicallyLoadedPart node="1|0" linkNode="0>0|0|1|9|0"  filename="$data/shared/connectionHoses/connectors.i3d" />
+    </dynamicallyLoadedParts>
+
+    <licensePlates>
+        <licensePlate node="0>0|1|8|5"  position="BACK" preferedType="ELONGATED" placementArea="0.07 0.20 0.07 0.20"/>
+    </licensePlates> 
+
+    <animations>
+        <animation name="tipAnimationBack_bottom">
+            <part node="tipper"      startTime="0.8" endTime="12.8"   startRot="0 0 0"  endRot="-51 0 0"/>
+            <part node="bakLem"  startTime="0.0"   endTime="0.4" direction="1"  startRot="0 0 0"  endRot="-126 0 0"/>
+			<part node="bakLem"  startTime="0.0"   endTime="0.4" direction="-1" startRot="0 0 0" endRot="0 0 0" />
+			<part node="bakLem_Syl"  startTime="0.0"   endTime="0.4" direction="1" startRot="-29.519 0 0" endRot="34 0 0" />
+			<part node="bakLem_Syl"  startTime="0"   endTime="0.9" direction="-1" startRot="-29.519 0 0" endRot="-29.519 0 0" />
+			<part node="bakLem_trekkSylMovable"  startTime="0.0"   endTime="0.4" direction="1" startTrans="0 0 0"  endTrans="0 0.18 0" />
+			<part node="bakLem_trekkSylMovable"  startTime="0"   endTime="0.9" direction="-1" startTrans="0 0 0" endTrans="0 0 0" />
+            
+            <!-- start of tipping -->
+            <sound template="metalLowVar3"  startTime="0.01"  direction="1"  volumeScale="2.0" pitchScale="0.7"/>
+            <sound template="metalOpen"     startTime="0.01"  direction="1"  volumeScale="1.4" pitchScale="0.9"/>
+            <sound template="thudVar1"      startTime="0.65"  direction="1" volumeScale="1.5" pitchScale="0.7"/>
+            
+            <!-- first cylinder -->            
+            <sound template="metalLowVar2"  startTime="3.30" direction="1"  volumeScale="2.5" pitchScale="0.7"/>
+            <sound template="clackVar6"     startTime="3.30" direction="1"  volumeScale="0.6" pitchScale="0.5"/>
+            <sound template="cylinderPunch" startTime="3.30" direction="1"  volumeScale="1.0" pitchScale="0.9"/>
+
+            <!-- second cylinder -->
+            <sound template="metalLowVar2"  startTime="6.50" direction="1"  volumeScale="2.5" pitchScale="0.7"/>
+            <sound template="clackVar5"     startTime="6.50" direction="1"  volumeScale="0.6" pitchScale="0.5"/>
+            <sound template="cylinderPunch" startTime="6.50" direction="1"  volumeScale="1.0" pitchScale="0.9"/>
+
+            <!-- third cylinder -->
+            <sound template="metalLowVar2"  startTime="9.50" direction="1"  volumeScale="2.5" pitchScale="0.7"/>
+            <sound template="clackVar5"     startTime="9.50" direction="1"  volumeScale="0.6" pitchScale="0.5"/>
+            <sound template="cylinderPunch" startTime="9.50" direction="1"  volumeScale="1.0" pitchScale="0.9"/>
+
+            <!-- end of tipping -->
+            <sound template="metalLowVar2"  startTime="12.80" direction="1"  volumeScale="2.5" pitchScale="0.7"/>
+            <sound template="clackVar5"     startTime="12.80" direction="1"  volumeScale="0.6" pitchScale="0.5"/>
+            <sound template="cylinderPunch" startTime="12.80" direction="1"  volumeScale="1.0" pitchScale="0.9"/>
+
+            <sound template="metalLowVar2"  startTime="12.78" direction="-1"  volumeScale="2.5" pitchScale="0.7"/>
+            <sound template="clackVar5"     startTime="12.78" direction="-1"  volumeScale="0.6" pitchScale="0.5"/>
+            <sound template="cylinderPunch" startTime="12.78" direction="-1"  volumeScale="1.0" pitchScale="0.9"/>
+
+            <sound template="metalLowVar2"  startTime="9.50" direction="-1"  volumeScale="2.5" pitchScale="0.7"/>
+            <sound template="clackVar6"     startTime="9.50" direction="-1"  volumeScale="0.6" pitchScale="0.5"/>
+            <sound template="cylinderPunch" startTime="9.50" direction="-1"  volumeScale="1.0" pitchScale="0.9"/>
+            
+            <sound template="thudVar1"      startTime="3.30"  direction="-1" volumeScale="1.5" pitchScale="0.7"/>
+            <sound template="clackVar5"     startTime="3.30" direction="-1" volumeScale="0.8" pitchScale="0.3"/>
+            <sound template="cylinderPunch" startTime="7.80" direction="-1"  volumeScale="1.0" pitchScale="0.9"/>
+            
+            <sound template="thudVar2"      startTime="0.81"  direction="1" volumeScale="2.5" pitchScale="0.7"/>
+            <sound template="clackVar1"     startTime="0.1"   direction="-1" volumeScale="1.8" pitchScale="0.7"/>
+            <sound template="metalLowVar2"  startTime="0.01"  direction="-1" volumeScale="3.0" pitchScale="0.6"/>
+            <sound template="metalLowVar3"  startTime="0.81"   direction="-1" volumeScale="3.0" pitchScale="0.7"/>
+            <sound template="metalLowVar2"  startTime="0.8"   direction="-1" volumeScale="3.0" pitchScale="0.9"/>
+        </animation>
+
+        <animation name="tipAnimationBack_bottom2">
+            <part node="tipper"      startTime="0.8" endTime="12.8"   startRot="0 0 0"  endRot="-51 0 0"/>
+            <part node="bakLem"  startTime="0.0"   endTime="0.4" direction="1"  startRot="0 0 0"  endRot="-126 0 0"/>
+			<part node="bakLem"  startTime="0.0"   endTime="0.4" direction="-1" startRot="0 0 0" endRot="0 0 0" />
+			<part node="bakLem_Syl"  startTime="0.0"   endTime="0.4" direction="1" startRot="-29.519 0 0" endRot="34 0 0" />
+			<part node="bakLem_Syl"  startTime="0"   endTime="0.9" direction="-1" startRot="-29.519 0 0" endRot="-29.519 0 0" />
+			<part node="bakLem_trekkSylMovable"  startTime="0.0"   endTime="0.4" direction="1" startTrans="0 0 0"  endTrans="0 0.18 0" />
+			<part node="bakLem_trekkSylMovable"  startTime="0"   endTime="0.9" direction="-1" startTrans="0 0 0" endTrans="0 0 0" />
+            <part node="bigDoor"  startTime="0.8"   endTime="6" startRot="0 0 0"  endRot="55 0 0"/>
+            <part node="bigDoor"  startTime="0.8"   endTime="6" direction="-1" startRot="0 0 0"  endRot="0 0 0"/>
+            
+            <!-- start of tipping -->
+            <sound template="metalLowVar3"  startTime="0.01"  direction="1"  volumeScale="2.0" pitchScale="0.7"/>
+            <sound template="metalOpen"     startTime="0.01"  direction="1"  volumeScale="1.4" pitchScale="0.9"/>
+            <sound template="thudVar1"      startTime="0.65"  direction="1" volumeScale="1.5" pitchScale="0.7"/>
+            
+            <!-- first cylinder -->            
+            <sound template="metalLowVar2"  startTime="3.30" direction="1"  volumeScale="2.5" pitchScale="0.7"/>
+            <sound template="clackVar6"     startTime="3.30" direction="1"  volumeScale="0.6" pitchScale="0.5"/>
+            <sound template="cylinderPunch" startTime="3.30" direction="1"  volumeScale="1.0" pitchScale="0.9"/>
+
+            <!-- second cylinder -->
+            <sound template="metalLowVar2"  startTime="6.50" direction="1"  volumeScale="2.5" pitchScale="0.7"/>
+            <sound template="clackVar5"     startTime="6.50" direction="1"  volumeScale="0.6" pitchScale="0.5"/>
+            <sound template="cylinderPunch" startTime="6.50" direction="1"  volumeScale="1.0" pitchScale="0.9"/>
+
+            <!-- third cylinder -->
+            <sound template="metalLowVar2"  startTime="9.50" direction="1"  volumeScale="2.5" pitchScale="0.7"/>
+            <sound template="clackVar5"     startTime="9.50" direction="1"  volumeScale="0.6" pitchScale="0.5"/>
+            <sound template="cylinderPunch" startTime="9.50" direction="1"  volumeScale="1.0" pitchScale="0.9"/>
+
+            <!-- end of tipping -->
+            <sound template="metalLowVar2"  startTime="12.80" direction="1"  volumeScale="2.5" pitchScale="0.7"/>
+            <sound template="clackVar5"     startTime="12.80" direction="1"  volumeScale="0.6" pitchScale="0.5"/>
+            <sound template="cylinderPunch" startTime="12.80" direction="1"  volumeScale="1.0" pitchScale="0.9"/>
+
+            <sound template="metalLowVar2"  startTime="12.78" direction="-1"  volumeScale="2.5" pitchScale="0.7"/>
+            <sound template="clackVar5"     startTime="12.78" direction="-1"  volumeScale="0.6" pitchScale="0.5"/>
+            <sound template="cylinderPunch" startTime="12.78" direction="-1"  volumeScale="1.0" pitchScale="0.9"/>
+
+            <sound template="metalLowVar2"  startTime="9.50" direction="-1"  volumeScale="2.5" pitchScale="0.7"/>
+            <sound template="clackVar6"     startTime="9.50" direction="-1"  volumeScale="0.6" pitchScale="0.5"/>
+            <sound template="cylinderPunch" startTime="9.50" direction="-1"  volumeScale="1.0" pitchScale="0.9"/>
+            
+            <sound template="thudVar1"      startTime="3.30"  direction="-1" volumeScale="1.5" pitchScale="0.7"/>
+            <sound template="clackVar5"     startTime="3.30" direction="-1" volumeScale="0.8" pitchScale="0.3"/>
+            <sound template="cylinderPunch" startTime="7.80" direction="-1"  volumeScale="1.0" pitchScale="0.9"/>
+            
+            <sound template="thudVar2"      startTime="0.81"  direction="1" volumeScale="2.5" pitchScale="0.7"/>
+            <sound template="clackVar1"     startTime="0.1"   direction="-1" volumeScale="1.8" pitchScale="0.7"/>
+            <sound template="metalLowVar2"  startTime="0.01"  direction="-1" volumeScale="3.0" pitchScale="0.6"/>
+            <sound template="metalLowVar3"  startTime="0.81"   direction="-1" volumeScale="3.0" pitchScale="0.7"/>
+            <sound template="metalLowVar2"  startTime="0.8"   direction="-1" volumeScale="3.0" pitchScale="0.9"/>
+        </animation>
+
+        <animation name="baklem_Manual">
+            <part node="bakLem"  startTime="0.0"   endTime="0.4" direction="1"  startRot="0 0 0"  endRot="-126 0 0"/>
+			<part node="bakLem"  startTime="0.0"   endTime="0.4" direction="-1" startRot="0 0 0" endRot="0 0 0" />
+			<part node="bakLem_Syl"  startTime="0.0"   endTime="0.4" direction="1" startRot="-29.519 0 0" endRot="34 0 0" />
+			<part node="bakLem_Syl"  startTime="0"   endTime="0.9" direction="-1" startRot="-29.519 0 0" endRot="-29.519 0 0" />
+			<part node="bakLem_trekkSylMovable"  startTime="0.0"   endTime="0.4" direction="1" startTrans="0 0 0"  endTrans="0 0.18 0" />
+			<part node="bakLem_trekkSylMovable"  startTime="0"   endTime="0.9" direction="-1" startTrans="0 0 0" endTrans="0 0 0" />
+        </animation>
+    </animations>
+
+    <cylindered>
+        <movingTools>
+            <movingTool node="tipper" playSound="true" >
+                <dependentPart node="tippSylBase" />
+            </movingTool>
+            <movingTool node="bakLem" playSound="true" foldingConfigurationIndex="2" fillUnitIndex="1" minFillLevel="0" maxFillLevel="0">
+                <controls axis="AXIS_FRONTLOADER_ARM" invertAxis="false" mouseSpeedFactor="1" iconName="TOP_DOOR_ROTATE" />
+                <animation animName="baklem_Manual" animAcceleration="5" animSpeed="0.5" />
+            </movingTool>
+
+        </movingTools>
+
+        <movingParts>
+            <movingPart node="tippSylBase" referencePoint="tippSyl_ref" referenceFrame="tippSyl_ref" divideTranslatingDistance="false">
+                <translatingPart node="tippingCylinder_1" maxZTrans="0.324" />
+                <translatingPart node="tippingCylinder_2" maxZTrans="0.333" />
+                <translatingPart node="tippingCylinder_3" maxZTrans="0.333" />
+                <translatingPart node="tippingCylinder_4" maxZTrans="0.333"/>
+				<translatingPart node="tippingCylinder_5" maxZTrans="0.333" />
+				<translatingPart node="tippingCylinder_6" maxZTrans="0.333" />
+                <translatingPart node="tippingCylinder_7" maxZTrans="0.333" />
+            </movingPart>
+        </movingParts>
+
+        <sounds>
+            <actionSound template="defaultHydraulicSound" pitchScale="0.5" volumeScale="2.2" linkNode="tippSylBase" actionNames="TRANSLATING_POS" nodes="tippSylBase"/>
+            <actionSound template="defaultHydraulicSound" pitchScale="0.2" volumeScale="1.3" linkNode="tippSylBase" actionNames="TRANSLATING_NEG" nodes="tippSylBase"/>
+            <actionSound template="cylinderPunch" pitchScale="0.7" linkNode="tippSylBase" actionNames="TRANSLATING_END_NEG" nodes="tippingCylinder_3"/>
+            <actionSound template="cylinderPunch" pitchScale="0.7" linkNode="tippSylBase" actionNames="TRANSLATING_END_NEG" nodes="tippingCylinder_4"/>
+        </sounds>
+    </cylindered>
+
+    <fillUnit>
+        <fillUnitConfigurations>
+			<fillUnitConfiguration name="$l10n_configuration_capacityX" price="0" params="7500" >
+                <fillUnits>
+                    <fillUnit shopDisplayUnit="CUBICMETER" fillTypeCategories="BULK" capacity="7500" allowAILoading="true">
+                        <exactFillRootNode node="exactFillRootNode" />
+                        <autoAimTargetNode node="fillAutoAimTarget" startZ="1.0" endZ="4.1" invert="false" startPercentage="25"/>
+                    </fillUnit>
+                </fillUnits> 
+                <objectChange node="bigDoor" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="highCap_col" scaleActive="0 0 0"/>
+			</fillUnitConfiguration>
+            <fillUnitConfiguration name="$l10n_configuration_capacityX" price="0" params="9000" >
+                <fillUnits>
+                    <fillUnit shopDisplayUnit="CUBICMETER" fillTypeCategories="BULK" capacity="9000" allowAILoading="true">
+                        <exactFillRootNode node="exactFillRootNode" />
+                        <autoAimTargetNode node="fillAutoAimTarget" startZ="1.0" endZ="4.1" invert="false" startPercentage="25"/>
+                    </fillUnit>
+                </fillUnits> 
+                <objectChange node="bigDoor" visibilityActive="true" visibilityInactive="false"/>
+			</fillUnitConfiguration>
+        </fillUnitConfigurations>
+    </fillUnit>
+
+    <fillVolume>
+        <fillVolumeConfigurations>
+            <fillVolumeConfiguration>
+                <volumes>
+                    <volume node="fillVolume" maxDelta="0.23" maxAllowedHeapAngle="40" fillUnitIndex="1" />
+                </volumes>
+            </fillVolumeConfiguration>
+            <fillVolumeConfiguration>
+                <volumes>
+                    <volume node="fillVolumeBig" maxDelta="0.23" maxAllowedHeapAngle="40" fillUnitIndex="1" />
+                </volumes>
+            </fillVolumeConfiguration>
+        </fillVolumeConfigurations>
+
+        <unloadInfos>
+            <unloadInfo>
+                <node node="unloadInfo" width="2" length="1.0" />
+            </unloadInfo>
+        </unloadInfos>
+    </fillVolume>
+
+    <trailer>
+        <trailerConfigurations>
+            <trailerConfiguration>
+                <trailer>
+                    <tipSide name="$l10n_info_tipSideBack" dischargeNodeIndex="1">
+                        <animation name="tipAnimationBack_bottom" speedScale="1.0" startTipTime="0.05"/>
+                    </tipSide>
+                </trailer>
+            </trailerConfiguration>
+            <trailerConfiguration>
+                <trailer>
+                    <tipSide name="$l10n_info_tipSideBack" dischargeNodeIndex="1">
+                        <animation name="tipAnimationBack_bottom2" speedScale="1.0" startTipTime="0.05"/>
+                    </tipSide>
+                </trailer>
+            </trailerConfiguration>
+        </trailerConfigurations>
+    </trailer>
+
+    <dischargeable>
+        <dischargeableConfigurations>
+            <dischargeableConfiguration>
+                <dischargeNode node="dischargeNode1" emptySpeed="900" fillUnitIndex="1" unloadInfoIndex="1" allowAIDischarge="true">
+                    <info width="2.0" length="0.5" />
+                    <effects>
+                        <effectNode effectClass="TipEffect">
+                            <effectNode effectNode="effectParticle" effectClass="ParticleEffect" materialType="unloadingParticle"/>
+                            <effectNode effectNode="effectGrain" materialType="unloading" materialTypeId="1" fadeTime="0.5" extraDistanceNode="dischargeNode1" extraDistance="0"/>
+                        </effectNode>
+                        <effectNode effectNode="smokeEffect" materialType="unloadingSmoke" fadeTime="0.5" />
+                    </effects>
+                </dischargeNode>
+            </dischargeableConfiguration>
+        </dischargeableConfigurations>
+    </dischargeable>
+
+    <ai>
+        <allowTurnBackward value="false"/>
+        <turningRadiusLimitation radius="8"/>
+        <agentAttachment jointNode="attacherJoint" rotCenterWheelIndices="1 2 3 4" width="3" height="3" length="5" lengthOffset="1"/>
+    </ai>
+
+    <foliageBending>
+        <bendingNode minX="-1.2" maxX="1.2" minZ="-3.3" maxZ="1.7" yOffset="0.6" />
+    </foliageBending>
+
+    <designConfigurations title="$l10n_configuration_decals">
+        <designConfiguration name="$l10n_configuration_old" price="0">
+            <objectChange node="0>0|1|0|1" 		visibilityActive="true"/>
+            <objectChange node="0>0|1|0|1" 		visibilityActive="true"/>
+			<objectChange node="0>0|1|8|3|1" 	visibilityActive="true"/>
+            <objectChange node="0>0|1|2|0" 		visibilityActive="true"/>
+
+            <objectChange node="0>0|1|0|3" 		visibilityActive="false"/>
+            <objectChange node="0>0|1|2|2" 		visibilityActive="false"/>
+			<objectChange node="0>0|1|8|3|2" 	visibilityActive="false"/>
+			
+			<objectChange node="DennisK" 		visibilityActive="false"/>
+        </designConfiguration>
+        <designConfiguration name="$l10n_configuration_new" price="0">
+            <objectChange node="0>0|1|0|3" 		visibilityActive="true"/>
+            <objectChange node="0>0|1|2|2" 		visibilityActive="true"/>
+			<objectChange node="0>0|1|8|3|2" 	visibilityActive="true"/>
+			
+			<objectChange node="DennisK" 		visibilityActive="false"/>
+        </designConfiguration>
+        <designConfiguration name="$l10n_configuration_dennisk" price="0">
+			<objectChange node="DennisK" 		visibilityActive="true"/>
+		
+            <objectChange node="0>0|1|0|1" 		visibilityActive="false"/>
+            <objectChange node="0>0|1|0|1" 		visibilityActive="false"/>
+			<objectChange node="0>0|1|8|3|1" 	visibilityActive="false"/>
+            <objectChange node="0>0|1|2|0" 		visibilityActive="false"/>
+
+            <objectChange node="0>0|1|0|3" 		visibilityActive="false"/>
+            <objectChange node="0>0|1|2|2" 		visibilityActive="false"/>
+			<objectChange node="0>0|1|8|3|2" 	visibilityActive="false"/>
+        </designConfiguration>
+    </designConfigurations>
+
+    <design2Configurations title="$l10n_configuration_rearlights">
+        <design2Configuration name="#1" price="0">
+            <objectChange node="rearLight_left1" 		visibilityActive="true"/>
+            <objectChange node="rearLight_left2" 		visibilityActive="true"/>
+            <objectChange node="rearLight_right2" 		visibilityActive="true"/>
+            <objectChange node="rearLight_right1" 		visibilityActive="true"/>
+
+            <objectChange node="additionalLights" 		visibilityActive="false"/>
+			
+            <objectChange node="rearLight_left1_01" 	visibilityActive="false"/>
+            <objectChange node="rearLight_left2_01" 	visibilityActive="false"/>
+            <objectChange node="rearLight_right2_01" 	visibilityActive="false"/>
+            <objectChange node="rearLight_right1_01" 	visibilityActive="false"/>
+
+
+        </design2Configuration>
+        <design2Configuration name="#2" price="0">        
+            <objectChange node="additionalLights" 		visibilityActive="false"/>
+			
+            <objectChange node="rearLight_left1" 		visibilityActive="false"/>
+            <objectChange node="rearLight_left2" 		visibilityActive="false"/>
+            <objectChange node="rearLight_right2" 		visibilityActive="false"/>
+            <objectChange node="rearLight_right1" 		visibilityActive="false"/>
+        </design2Configuration>
+		
+        <design2Configuration name="#1 + Additional lights" price="0">
+            <objectChange node="additionalLights" 		visibilityActive="true"/>
+			
+            <objectChange node="rearLight_left1" 		visibilityActive="true"/>
+            <objectChange node="rearLight_left2" 		visibilityActive="true"/>
+            <objectChange node="rearLight_right2" 		visibilityActive="true"/>
+            <objectChange node="rearLight_right1" 		visibilityActive="true"/>
+
+            <objectChange node="rearLight_left1_01" 	visibilityActive="false"/>
+            <objectChange node="rearLight_left2_01" 	visibilityActive="false"/>
+            <objectChange node="rearLight_right2_01" 	visibilityActive="false"/>
+            <objectChange node="rearLight_right1_01" 	visibilityActive="false"/>
+
+        </design2Configuration>
+		
+        <design2Configuration name="#2 + Additional lights" price="0">
+        
+            <objectChange node="additionalLights" 		visibilityActive="true"/>
+			
+            <objectChange node="rearLight_left1" 		visibilityActive="false"/>
+            <objectChange node="rearLight_left2" 		visibilityActive="false"/>
+            <objectChange node="rearLight_right2" 		visibilityActive="false"/>
+            <objectChange node="rearLight_right1" 		visibilityActive="false"/>
+        </design2Configuration>
+    </design2Configurations>
+	
+	<design3Configurations title="$l10n_configuration_worklights">
+        <design3Configuration name="$l10n_ui_no" price="0">
+            <objectChange node="0>0|1|8|4" visibilityActive="false"/>
+        </design3Configuration>
+		<design3Configuration name="$l10n_ui_yes" price="400">
+            <objectChange node="0>0|1|8|4" visibilityActive="true"/>
+        </design3Configuration>
+    </design3Configurations>
+
+    <baseMaterial>
+        <material name="fossEik_mat" baseNode="0>0">
+            <shaderParameter name="colorMat0" value="0 0.227 0.061 0"/>
+			<shaderParameter name="colorMat1" value="0.072 0.068 0.058 0"/>
+        </material>
+        <material name="decals_udim" baseNode="0>0|1|0|2">
+            <shaderParameter name="colorMat0" value="0.7 0 0 1"/>
+        </material>
+        <material name="wheelRing_mat" baseNode="wheelRingLF">
+            <shaderParameter name="colorMat0" value="0.7 0 0 1"/>
+        </material>
+    </baseMaterial>
+	
+	<baseMaterialConfigurations price="1500" useDefaultColors="true" defaultColorIndex="0">
+        <material name="fossEik_mat" 		shaderParameter="colorMat0" />
+        <material name="wheelRing_mat" 	shaderParameter="colorMat0" />
+		
+		<baseMaterialConfiguration 		name="DennisK Dark Blue" 	color="0.005 0.001 0.533"/>
+		<baseMaterialConfiguration 		name="DennisK Light Blue" 	color="0.000 0.776 1.000"/>
+		<baseMaterialConfiguration 		name="DennisK Black" 		color="0 0 0"/>
+		<baseMaterialConfiguration 		name="Black Matt" 			color="0.015 0.015 0.015" material="23"/>
+        <baseMaterialConfiguration 		name="$l10n_fossEik_green" 	color="0 0.227 0.061 0"/>
+    </baseMaterialConfigurations>
+	
+	<designMaterialConfigurations price="800" defaultColorIndex="0" useDefaultColors="true"  title="$l10n_configuration_designColor">
+        <material name="fossEik_mat" shaderParameter="colorMat1" />
+		
+		<designMaterialConfiguration 	name="DennisK Black" 		color="0 0 0"/>
+		<designMaterialConfiguration 	name="DennisK Dark Blue" 	color="0.005 0.001 0.533"/>
+		<designMaterialConfiguration 	name="DennisK Light Blue" 	color="0.000 0.776 1.000"/>
+		<designMaterialConfiguration	name="Black Matt" 			color="0.015 0.015 0.015" material="23"/>
+        <designMaterialConfiguration 	name="$l10n_fossEik_grey" 	color="0.072 0.068 0.058 0"/>
+    </designMaterialConfigurations>
+
+    <designMaterial2Configurations price="0" useDefaultColors="true" defaultColorIndex="0" title="$l10n_decalColor">
+		<material name="decals_udim" shaderParameter="colorMat0" />
+		
+		<designMaterial2Configuration 	name="DennisK Light Blue" 	color="0.000 0.776 1.000"/>
+		<designMaterial2Configuration 	name="DennisK Black" 		color="0 0 0"/>
+		<designMaterial2Configuration 	name="DennisK Dark Blue" 	color="0.005 0.001 0.533"/>
+		<designMaterial2Configuration	name="Black Matt" 			color="0.015 0.015 0.015" material="23"/>
+        <designMaterial2Configuration 	name="$l10n_red" 			color="0.7 0 0 1" 			price="0"/>
+        <designMaterial2Configuration 	name="$l10n_grey" 			color="0.7 0.7 0.7 1" 		price="0" />
+		<designMaterial2Configuration 	name="$l10n_black"			color="0.05 0.05 0.05 1" 	price="0" />
+	</designMaterial2Configurations>
+
+    <rimColorConfigurations defaultColorIndex="0" useDefaultColors="true" price="500">
+		<rimColorConfiguration			name="Black Matt" 			color="0.015 0.015 0.015" material="23"/>
+		<rimColorConfiguration 			name="DennisK Light Blue" 	color="0.000 0.776 1.000"/>
+		<rimColorConfiguration 			name="DennisK Black" 		color="0 0 0"/>
+		<rimColorConfiguration 			name="DennisK Dark Blue" 	color="0.005 0.001 0.533"/>
+        <rimColorConfiguration 			name="$l10n_colorDefault" 	color="SHARED_WHITE1"  material="18" price="0"/>
+    </rimColorConfigurations>
+
+    <wearable wearDuration="480" workMultiplier="5" fieldMultiplier="2"/>
+	
+    <washable dirtDuration="90" washDuration="1" workMultiplier="3" fieldMultiplier="2"/>
+
+    <i3dMappings>
+		<i3dMapping id="attacherJoint" 				node="0>0|0|0" />
+		
+		<i3dMapping id="tipper" 					node="0>0|1" />
+				
+		<i3dMapping id="bakLem" 					node="0>0|1|0" />
+		<i3dMapping id="bakLem_Syl" 				node="0>0|1|0|0" />
+		
+		<i3dMapping id="bakLem_trekkSyl" 			node="0>0|1|1" />
+		<i3dMapping id="bakLem_trekkSylMovable"		node="0>0|1|1|0" />
+        <i3dMapping id="bigDoor" 					node="0>0|1|2" />
+        <i3dMapping id="highCap_col" 				node="0>0|1|2|1" />
+		<i3dMapping id="tippSyl_ref" 				node="0>0|1|4" />
+		<i3dMapping id="fillVolume" 				node="0>0|1|5|0" />
+		<i3dMapping id="exactFillRootNode" 			node="0>0|1|5|01" />
+		<i3dMapping id="fillAutoAimTarget" 			node="0>0|1|5|2" />
+		<i3dMapping id="unloadInfo" 				node="0>0|1|5|3" />
+        <i3dMapping id="fillVolumeBig" 				node="0>0|1|5|4" />
+		<i3dMapping id="effectParticle" 			node="0>0|1|6|0|1|0" />
+		<i3dMapping id="effectGrain" 				node="0>0|1|6|0|0|0" />
+		<i3dMapping id="smokeEffect" 				node="0>0|1|6|0|0|1" />
+		<i3dMapping id="dischargeNode1" 			node="0>0|1|7" />
+		
+		
+		<i3dMapping id="rearLight_left1" 			node="0>0|1|8|2|1|0|0" />
+		<i3dMapping id="rearLight_left2" 			node="0>0|1|8|2|1|0|1" />
+		<i3dMapping id="rearLight_right2" 			node="0>0|1|8|2|1|0|2" />
+		<i3dMapping id="rearLight_right1" 			node="0>0|1|8|2|1|0|3" />
+        <i3dMapping id="rearLight_left1_01" 		node="0>0|1|8|2|1|1|0" />
+		<i3dMapping id="rearLight_left2_01" 		node="0>0|1|8|2|1|1|1" />
+		<i3dMapping id="rearLight_right2_01" 		node="0>0|1|8|2|1|1|2" />
+		<i3dMapping id="rearLight_right1_01" 		node="0>0|1|8|2|1|1|3" />
+        <i3dMapping id="additionalLights" 			node="0>0|1|8|2|1|4" />
+        <i3dMapping id="rearLightR_01_top" 			node="0>0|1|8|2|1|4|1|0" />
+        <i3dMapping id="rearLightL_01_top" 			node="0>0|1|8|2|1|4|1|1" />
+        <i3dMapping id="sideMarkerL_01" 			node="0>0|1|8|2|1|4|2|0|0" />
+        <i3dMapping id="sideMarkerL_02" 			node="0>0|1|8|2|1|4|2|0|1" />
+        <i3dMapping id="sideMarkerL_03" 			node="0>0|1|8|2|1|4|2|0|2" />
+        <i3dMapping id="sideMarkerL_04" 			node="0>0|1|8|2|1|4|2|0|3" />
+        <i3dMapping id="sideMarkerR_01" 			node="0>0|1|8|2|1|4|2|1|0" />
+        <i3dMapping id="sideMarkerR_02" 			node="0>0|1|8|2|1|4|2|1|1" />
+        <i3dMapping id="sideMarkerR_03" 			node="0>0|1|8|2|1|4|2|1|2" />
+        <i3dMapping id="sideMarkerR_04" 			node="0>0|1|8|2|1|4|2|1|3" />
+        <i3dMapping id="sidemarkerOrange_real" 		node="0>0|1|8|2|1|4|3|0" />
+        <i3dMapping id="sidemarkerRed_real" 		node="0>0|1|8|2|1|4|3|1" />
+		<i3dMapping id="sideMarker04_left" 			node="0>0|1|8|2|2|0" />
+		<i3dMapping id="sideMarker04_left_2" 		node="0>0|1|8|2|2|1" />
+		<i3dMapping id="sideMarker04_right" 		node="0>0|1|8|2|2|2" />
+        <i3dMapping id="sideMarker04_right_2" 		node="0>0|1|8|2|2|3" />
+        <i3dMapping id="DennisK" 					node="0>0|1|8|3|5" />
+        <i3dMapping id="worklight1" 				node="0>0|1|8|4|0|0" />
+        <i3dMapping id="worklight2" 				node="0>0|1|8|4|1|0" />
+		
+		<i3dMapping id="tippSylBase" 				node="0>0|2" />
+		<i3dMapping id="tippingCylinder_1" 			node="0>0|2|0" />
+		<i3dMapping id="tippingCylinder_2" 			node="0>0|2|0|0" />
+		<i3dMapping id="tippingCylinder_3" 			node="0>0|2|0|0|0" />
+		<i3dMapping id="tippingCylinder_4" 			node="0>0|2|0|0|0|0" />
+		<i3dMapping id="tippingCylinder_5" 			node="0>0|2|0|0|0|0|0" />
+		<i3dMapping id="tippingCylinder_6" 			node="0>0|2|0|0|0|0|0|0" />
+        <i3dMapping id="tippingCylinder_7" 			node="0>0|2|0|0|0|0|0|0|0" />
+		
+		<i3dMapping id="jointBogieLeft" 			node="0>1|0" />	
+		
+		<i3dMapping id="jointBogieRight" 			node="0>1|1" />
+		
+		<i3dMapping id="wheelFrontLeft" 			node="1>0|0" />
+		<i3dMapping id="wheelRingLF" 				node="1>0|0|0" />	
+		<i3dMapping id="wheelBackLeft" 				node="1>0|1" />
+		<i3dMapping id="wheelRingLB" 				node="1>0|1|0" />	
+		
+		<i3dMapping id="wheelFrontRight" 			node="2>0|0" />
+		<i3dMapping id="wheelRingRF" 				node="2>0|0|0" />
+		<i3dMapping id="wheelBackRight" 			node="2>0|1" />
+		<i3dMapping id="wheelRingRB" 				node="2>0|1|0" />
+		
+	</i3dMappings>
+</vehicle>

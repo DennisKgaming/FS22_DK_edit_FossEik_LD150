@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="77">
+
+	<author>Grubby</author>
+	
+    <version>1.0.0.1</version>
+	
+	<title>
+		<en>Foss-Eik LD5.150 DK edit</en>
+    </title>
+	
+<description>
+<en><![CDATA[
+Foss-Eik LD5.150 is a trailer produced in Norway by the Norwegian brand Foss-Eik. This trailer is widely used by both farmers and contractors in Norway.
+
+Price: From 15.000$
+Capacity: 7500L-9000L
+Category: Trailers
+
+Configurations: 
+- Worklights
+- Rear lights
+- Decals: New/Old
+- Colors
+
+Changelog 1.0.0.1:
+Hotfix that sorts out the following:
+- Wheels clipping through trailer
+- Licenseplate not following tipper body
+
+]]></en>
+<de><![CDATA[
+Der Foss-Eik LD5.150 ist ein Anhänger, der von der norwegischen Marke Foss-Eik hergestellt wird. Dieser Anhänger wird sowohl von Landwirten als auch von Lohnunternehmern in Norwegen häufig verwendet.
+
+Preis: Ab 15.000€
+Kapazität: 7500L-9000L
+Kategorie: Anhänger
+
+Konfigurationen: 
+- Arbeitsscheinwerfer
+- Rückleuchten
+- Aufkleber: Neu/Alt
+- Farben
+
+Änderungsliste 1.0.0.1:
+Hotfix, der die folgenden Probleme behebt:
+- Räder klettern durch den Anhänger
+- Nummernschild folgt nicht dem Kipperaufbau
+]]></de>
+</description>
+	<iconFilename>icons/icon_fossEikLD150.dds</iconFilename>
+	
+    <multiplayer supported="true"/>
+	
+    <brands>
+        <brand name="FOSSEIK" title="Foss-Eik" image="icons/brand_fossEik.dds"/>
+    </brands>
+	
+	<storeItems>
+		<storeItem xmlFilename="xml/lettdumper_150.xml"/>
+    </storeItems>
+
+	<l10n>
+		<text name="configuration_worklights">
+            <en>Worklights</en>
+            <de>Arbeitsscheinwerfer</de>
+        </text>
+        <text name="configuration_rearlights">
+            <en>Rearlights</en>
+            <de>Rücklichter</de>
+        </text>
+		<text name="configuration_decals">
+            <en>Decals</en>
+            <de>Aufkleber</de>
+        </text>
+		<text name="configuration_old">
+            <en>Old</en>
+            <de>Alte</de>
+        </text>
+		<text name="configuration_new">
+            <en>New</en>
+            <de>Neu</de>
+        </text>
+		<text name="configuration_dennisk">
+            <en>DennisK</en>
+            <de>Dennisk</de>
+        </text>
+        <text name="decalColor">
+            <en>Decal Color</en>
+            <de>Farbe des Aufklebers</de>
+        </text>
+        <text name="fossEik_grey">
+            <en>Foss-Eik Grey</en>
+            <de>Foss-Eik Grau</de>
+        </text>
+        <text name="fossEik_green">
+            <en>Foss-Eik Green</en>
+            <de>Foss-Eik Grün</de>
+        </text>
+        <text name="red">
+            <en>Red</en>
+            <de>Rot</de>
+        </text>
+        <text name="grey">
+            <en>Grey</en>
+            <de>Grau</de>
+        </text>
+        <text name="black">
+            <en>Black</en>
+            <de>Schwarz</de>
+        </text>
+        <text name="colorDefault">
+            <en>Default</en>
+            <de>Standard</de>
+        </text>
+	</l10n>
+	
+	<extraSourceFiles>
+        <sourceFile filename="scripts/categorizer.lua"/>
+    </extraSourceFiles>
+	
+	<newcategory name="DennisKtools" title="DennisK" type="TOOL" img="Categories/CategoryTools.png" />
+	
+</modDesc>
