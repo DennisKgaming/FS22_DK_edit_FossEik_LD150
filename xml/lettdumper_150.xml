@@ -228,6 +228,8 @@
 			<part node="bakLem_Syl"  startTime="0"   endTime="0.9" direction="-1" startRot="-29.519 0 0" endRot="-29.519 0 0" />
 			<part node="bakLem_trekkSylMovable"  startTime="0.0"   endTime="0.4" direction="1" startTrans="0 0 0"  endTrans="0 0.18 0" />
 			<part node="bakLem_trekkSylMovable"  startTime="0"   endTime="0.9" direction="-1" startTrans="0 0 0" endTrans="0 0 0" />
+			
+			<part node="0>0|1|6|0|0|0"   startTime="2" endTime="20"  startRot="0 0 0" endRot="90 0 0" />
             
             <!-- start of tipping -->
             <sound template="metalLowVar3"  startTime="0.01"  direction="1"  volumeScale="2.0" pitchScale="0.7"/>
@@ -283,6 +285,8 @@
 			<part node="bakLem_trekkSylMovable"  startTime="0"   endTime="0.9" direction="-1" startTrans="0 0 0" endTrans="0 0 0" />
             <part node="bigDoor"  startTime="0.8"   endTime="6" startRot="0 0 0"  endRot="55 0 0"/>
             <part node="bigDoor"  startTime="0.8"   endTime="6" direction="-1" startRot="0 0 0"  endRot="0 0 0"/>
+			
+			<part node="0>0|1|6|0|0|0"   startTime="2" endTime="20"  startRot="0 0 0" endRot="90 0 0" />
             
             <!-- start of tipping -->
             <sound template="metalLowVar3"  startTime="0.01"  direction="1"  volumeScale="2.0" pitchScale="0.7"/>
@@ -435,8 +439,8 @@
     </trailer>
 
     <dischargeable>
-        <dischargeableConfigurations>
-            <dischargeableConfiguration>
+       <!--  <dischargeableConfigurations>
+            <dischargeableConfiguration> -->
                 <dischargeNode node="dischargeNode1" emptySpeed="900" fillUnitIndex="1" unloadInfoIndex="1" allowAIDischarge="true">
                     <info width="2.0" length="0.5" />
                     <effects>
@@ -447,8 +451,8 @@
                         <effectNode effectNode="smokeEffect" materialType="unloadingSmoke" fadeTime="0.5" />
                     </effects>
                 </dischargeNode>
-            </dischargeableConfiguration>
-        </dischargeableConfigurations>
+<!--             </dischargeableConfiguration>
+        </dischargeableConfigurations> -->
     </dischargeable>
 
     <ai>
